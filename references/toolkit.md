@@ -6,9 +6,9 @@ Use this when files need to be read before coaching.
 
 Prefer the Codex bundled Python runtime when available because the system Python may not include document libraries.
 
-Known bundled path on this machine:
+Set CODEX_BUNDLED_PYTHON to the bundled Python path shown by your agent environment, then use:
 
-`/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3`
+`$CODEX_BUNDLED_PYTHON`
 
 If that path is unavailable, try `python3`. If imports fail, explain that the extraction script needs `pypdf` for PDF and `python-docx` for DOCX.
 
@@ -34,25 +34,25 @@ Default behavior:
 Recommended command:
 
 ```bash
-/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/extract_source_notes.py SOURCE.pdf
+$CODEX_BUNDLED_PYTHON scripts/extract_source_notes.py SOURCE.pdf
 ```
 
 For large files:
 
 ```bash
-/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/extract_source_notes.py --max-pages 30 SOURCE.pdf
+$CODEX_BUNDLED_PYTHON scripts/extract_source_notes.py --max-pages 30 SOURCE.pdf
 ```
 
 For quick section scan:
 
 ```bash
-/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/extract_source_notes.py --sections-only SOURCE.pdf
+$CODEX_BUNDLED_PYTHON scripts/extract_source_notes.py --sections-only SOURCE.pdf
 ```
 
 For keyword-focused extraction:
 
 ```bash
-/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/extract_source_notes.py --keywords "limitations,future research,method" SOURCE.pdf
+$CODEX_BUNDLED_PYTHON scripts/extract_source_notes.py --keywords "limitations,future research,method" SOURCE.pdf
 ```
 
 ## Extraction Workflow

@@ -53,7 +53,7 @@
 推荐使用 Codex bundled Python：
 
 ```bash
-/Users/ikaken/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 scripts/extract_source_notes.py SOURCE.pdf
+$CODEX_BUNDLED_PYTHON scripts/extract_source_notes.py SOURCE.pdf
 ```
 
 常用参数：
